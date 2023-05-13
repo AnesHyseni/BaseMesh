@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+
+    <link rel="icon" href="./favicon.ico">
+
+    <title>Anes-Hyseni/Contact</title>
+    <style>
+        /* Add your custom CSS styles here */
+        /* This is an improved version with a black background and Roboto Slab font */
+        body {
+            font-family: 'Roboto Slab', serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin: 20px 0 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        /***********/
+        .hamburger {
+            position: absolute;
+            top: 5em;
+            right: 0%;
+            margin-left: -2em;
+            margin-top: -45px;
+            width: 70px;
+            height: 70px;
+            z-index: 5;
+        }
+
+        .hamburger div {
+            position: relative;
+            width: 3em;
+            height: 7px;
+            border-radius: 3px;
+            background-color: #f8982b;
+            margin-top: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.97);
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+            transition: right 0.3s ease-in-out;
+        }
+
+        .menu {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+            width: 100%;
+        }
+
+        .menu li {
+            margin-bottom: 30px;
+        }
+
+        .menu a {
+            display: block;
+            font-size: 28px;
+            font-family: "Roboto Slab", Arial, sans-serif;
+            /*font-weight: bold;*/
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+            padding: 10px 0;
+            width: 100%;
+            text-align: left;
+            margin-left: 40px;
+        }
+
+        .menu a span {
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu a:hover {
+            color: #f8982b;
+        }
+
+        #toggle:checked+.hamburger .top-bun {
+            transform: rotate(-45deg);
+            margin-top: 25px;
+        }
+
+        #toggle:checked+.hamburger .bottom-bun {
+            opacity: 0;
+            transform: rotate(45deg);
+        }
+
+        #toggle:checked+.hamburger .meat {
+            transform: rotate(45deg);
+            margin-top: -7px;
+        }
+
+        #toggle:checked+.hamburger~.sidebar {
+            right: 0;
+        }
+        .hidden-checkbox {
+            position: absolute;
+            left: -9999px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contact info</h1>
+    <p>I am readily available for small to medium-sized projects and eager to collaborate. For more information and inquiries, please feel free to reach out to me via email.</p>
+    <p>AnesHyseni2@Gmail.com or crescentgamesstudio@gmail.com</p>
+
+    <input id="toggle" class="hidden-checkbox" type="checkbox"></input>
+
+    <label for="toggle" class="hamburger">
+        <div class="top-bun"></div>
+        <div class="meat"></div>
+        <div class="bottom-bun"></div>
+    </label>
+
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html">World</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./Legal.html">Legal</a></li>
+            <li><a href="./Contact.html">Contact</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
