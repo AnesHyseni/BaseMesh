@@ -14,95 +14,132 @@
 
     <title>Anes-Hyseni/About</title>
     <style>
-        /* Add your custom CSS styles here */
-        /* This is an improved version with a black background and Roboto Slab font */
-        body {
+        
+        /*body {
             font-family: 'Roboto Slab', serif;
             background-color: #000000;
             color: #ffffff;
             margin: 0;
             padding: 20px;
+        }*/
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
         }
 
-        header {
-            /*background-color: #333;*/
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            
+        /* Set up the main container */
+        body {
+        font-family: "Roboto Slab", Arial, sans-serif;
+        background-color: #0a0a0a;
+        color: #eeeeee;
+        padding: 20px;
+        }
+
+        .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            font-size: 28px;
-            font-family: 'Roboto Slab', serif;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-
-        main {
-            margin: 20px;
-            font-family: 'Roboto Slab', serif;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-
-        .skills-container {
-            display: flex;
-            font-family: 'Roboto Slab', serif;
-        }
-
-        .list-container {
-            margin-right: 20px;
-            font-family: 'Roboto Slab', serif;
-            white-space: nowrap;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            font-family: 'Roboto Slab', serif;
-        }
-
-        section {
-            margin-bottom: 30px;
-            font-family: 'Roboto Slab', serif;
+        font-size: 24px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
         }
 
         h2 {
-            font-size: 22px;
-            font-family: 'Roboto Slab', serif;
-            margin-bottom: 10px;
-            padding-left: 50px;
-            padding-right: 50px;
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
         }
 
         p {
-            margin-bottom: 15px;
-            font-family: 'Roboto Slab', serif;
-            padding-left: 50px;
-            padding-right: 50px;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
+        }
+
+        a {
+        color: #ffffff;
+        text-decoration: none;
+        }
+
+        a:hover {
+        text-decoration: underline;
+        }
+
+        span {
+        font-weight: bold;
+        }
+        
+        .skills-container {
+        display: flex;
+        justify-content: space-between;
+        }
+
+        .list-container {
+        flex-basis: 75%; /* Adjust the width as per your preference */
+        }
+
+        .list-container p {
+        text-decoration: underline;
         }
 
         ul {
-            list-style-type: disc;
-            font-family: 'Roboto Slab', serif;
-            margin-left: 20px;
-            padding-left: 50px;
-            padding-right: 50px;
+        list-style-type: disc;
+        margin: 0;
+        padding: 0;
         }
 
-        footer {
-            /*background-color: #333;*/
-            color: #fff;
-            font-family: 'Roboto Slab', serif;
+        li {
+        margin-left: 20px; /* Adjust the indentation as per your preference */
+        }
+
+        .list-container:nth-child(1) ul {
+        margin-left: 30px; /* Adjust the value as per your preference */
+        }
+
+        .list-container:nth-child(2) p {
+        white-space: nowrap;
+        margin-left: 10px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+        body {
             padding: 10px;
-            text-align: center;
+        }
+
+        .container {
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 8px;
+        }
+
+        p {
             font-size: 14px;
         }
-
+        }
         /***********/
         .hamburger {
-            position: absolute;
+            position: fixed;
             top: 5em;
             right: 0%;
             margin-left: -2em;
@@ -191,96 +228,71 @@
         #toggle:checked+.hamburger~.sidebar {
             right: 0;
         }
+        .hidden-checkbox:checked {
+            display: none;
+        }
 
         .hidden-checkbox {
-            position: absolute;
+            position: fixed;
             left: -9999px;
+            z-index: -1;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>About Me</h1>
-    </header>
-
-    <main>
-        <section>
-            <h2>Introduction</h2>
-            <p>Hello! I'm Anes Hyseni, a software developer who is passionate about creating immersive digital
-                experiences.</p>
-        </section>
-
-        <section>
-            <h2>Experties</h2>
-            <p>I focus in creating Unity games, 3D websites, and engaging applications that combine creativity and
-                functionality to deliver immersive experiences.</br>
-                Proficient in the complete spectrum of the creative process, encompassing coding systems, scripting,
-                shaders, VFX, modeling, rigging, texturing, animation, and all other intricacies involved in bringing
-                digital creations to life.
-            </p>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="list-container">
-                    <p>Coding</p>
-                    <ul>
-                        <li>C#</li>
-                        <li>JS</li>
-                        <li>Python</li>
-                        <li>C++</li>
-                        <li>C</li>
-                    </ul>
-                </div>
-                <div class="list-container">
-                    <p>Digital Creation</p>
-                    <ul>
-                        <li>Unity</li>
-                        <li>Blender</li>
-                        <li>Unreal</li>
-                        <li>Substance</li>
-                        <li>PS/Pr/Ai</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-        <section>
-            <h2>Experience</h2>
-            <p>With over 5 years of experience in C# and Unity, 2+ years in JavaScript, and a semester each in C++, Python, and C, I possess a solid foundation in programming languages. Additionally, I have honed my skills over 5+ years in Blender, 7+ years in Photoshop, 2+ years in Substance Painter, and 1+ year in Unreal Engine, allowing me to seamlessly blend creativity and technical expertise in my projects.</p>
-        </section>
-        <!--
-        <section>
-            <h2>Current Projects</h2>
-            <p>If you have any inquiries or would like to discuss a potential project, feel free to get in touch with
-                me. You can reach me via email at john@example.com or connect with me on LinkedIn.</p>
-        </section>
-        -->
-        <input id="toggle" class="hidden-checkbox" type="checkbox"></input>
-
-        <label for="toggle" class="hamburger">
-            <div class="top-bun"></div>
-            <div class="meat"></div>
-            <div class="bottom-bun"></div>
-        </label>
-    
-        <div class="sidebar">
-            <ul class="menu">
-                <li><a href="index.html">World</a></li>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./Legal.html">Legal</a></li>
-                <li><a href="./Contact.html">Contact</a></li>
+    <h1>About Me</h1>
+    <p></p>
+    <h2>Introduction</h2>
+    <p>Hello! I'm Anes Hyseni, a software developer who is passionate about creating immersive digital experiences.</p>
+    <h2>Experties</h2>
+    <p>I focus in creating Unity games, 3D websites, and engaging applications that combine creativity and
+        functionality to deliver immersive experiences.</br>
+        Proficient in the complete spectrum of the creative process, encompassing coding systems, scripting,
+        shaders, VFX, modeling, rigging, texturing, animation, and all other intricacies involved in bringing
+        digital creations to life.</p>
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="list-container">
+            <p>Coding</p>
+            <ul>
+                <li>C#</li>
+                <li>JS</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>C</li>
             </ul>
         </div>
-    </main>
+        <div class="list-container">
+            <p>Digital Creation</p>
+            <ul>
+                <li>Unity</li>
+                <li>Blender</li>
+                <li>Unreal</li>
+                <li>Substance</li>
+                <li>PS/Pr/Ai</li>
+            </ul>
+        </div>
+    </div>
+    <h2>Experience</h2>
+    <p>With over 5 years of experience in C# and Unity, 2+ years in JavaScript, and a semester each in C++, Python, and C, I possess a solid foundation in programming languages. Additionally, I have honed my skills over 5+ years in Blender, 7+ years in Photoshop, 2+ years in Substance Painter, and 1+ year in Unreal Engine, allowing me to seamlessly blend creativity and technical expertise in my projects.</p>
 
-    <footer>
-        <p>&copy; 2023.</p>
-    </footer>
-    
+    <input id="toggle" class="hidden-checkbox" type="checkbox"></input>
+
+    <label for="toggle" class="hamburger">
+        <div class="top-bun"></div>
+        <div class="meat"></div>
+        <div class="bottom-bun"></div>
+    </label>
+
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="index.html">World</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./Legal.html">Legal</a></li>
+            <li><a href="./Contact.html">Contact</a></li>
+        </ul>
+    </div>
 </body>
 
 </html>
